@@ -1,9 +1,16 @@
-```md
+
 # 🛒 Product Management System
 
 A simple **Product Management System** developed using **Node.js**, **Express**, **MySQL**, and **EJS** as part of the **Node.js Developer Coding Assignment**.
 
 This project demonstrates backend development, database handling, session-based authentication, and basic frontend integration using server-side rendering.
+
+---
+
+## 🔗 GitHub Repository
+
+👉 **Source Code:**  
+https://github.com/kirandinesh/product-management
 
 ---
 
@@ -55,7 +62,7 @@ This project demonstrates backend development, database handling, session-based 
 ---
 
 ## 📂 Project Structure
-```
+
 
 product-management/
 │
@@ -89,7 +96,7 @@ product-management/
 ├── package.json
 └── README.md
 
-````
+
 
 ---
 
@@ -99,7 +106,8 @@ product-management/
 
 ```bash
 npm install
-````
+```
+
 
 ---
 
@@ -210,15 +218,5 @@ You will be redirected to the login page.
 **Kiran Dinesh**
 _Node.js Developer Candidate_
 
-```
 
----
 
-If you want, I can also:
-- Add **screenshots section**
-- Improve it for **GitHub portfolio**
-- Rewrite it for **company submission / assignment PDF**
-- Add **API documentation** section
-
-Just say the word 🚀
-```
