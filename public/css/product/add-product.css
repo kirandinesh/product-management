@@ -1,0 +1,155 @@
+.product-main-container.active {
+  overflow: hidden;
+}
+.add-product-cancel {
+  display: flex;
+  justify-content: right;
+}
+.add-product-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-product-container .add-product-cancel .add-product-cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+.add-product-container .add-product-cancel .add-product-cancel-button .sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-product-container
+  .add-product-cancel
+  .add-product-cancel-button
+  .sign
+  svg {
+  width: 17px;
+}
+
+.add-product-container
+  .add-product-cancel
+  .add-product-cancel-button
+  .sign
+  svg
+  path {
+  stroke-width: 5px;
+  stroke: white;
+}
+
+.add-product-container {
+  z-index: 10;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  max-width: 350px;
+  width: 100%;
+  height: fit-content;
+  background: #f8f9fd;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 255, 255) 0%,
+    rgb(244, 247, 251) 100%
+  );
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.add-product-container.active {
+  transform: scale(1);
+  transition: 0.4s ease;
+  opacity: 1;
+}
+
+.add-product-container .heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(16, 137, 211);
+}
+
+.add-product-container .form {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.add-product-container .form .input-field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product-container .form .input {
+  width: 100%;
+
+  background: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+}
+
+.add-product-container .form .input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.add-product-container .form .input::placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.add-product-container .form .input:focus {
+  outline: none;
+  border-inline: 2px solid #12b1d1;
+}
+
+.add-product-container .form .confirm-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    rgb(16, 137, 211) 0%,
+    rgb(18, 177, 209) 100%
+  );
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-product-container .form .confirm-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.add-product-container .form .confirm-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}

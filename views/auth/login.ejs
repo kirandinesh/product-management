@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/auth/login.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <div class="heading">Sign In</div>
+
+        <form method="post" action="/auth/login" class="form">
+          <div class="input-field-container">
+            <input
+              required=""
+              class="input"
+              type="email"
+              name="userEmail"
+              id="email"
+              placeholder="E-mail"
+            />
+            <input
+              required=""
+              class="input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <% if (errors && errors.length>0 ) { %>
+              <% errors.forEach(error => { %>
+                <p class="alert">
+              <%= error %>
+               </p>
+              <% }) %>
+            <% } %>
+          </div>
+          
+          <span class="forgot-password"><a href="/auth/forget-password">Forgot Password ?</a></span>
+          <button class="login-button" type="submit" value="Sign In">
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

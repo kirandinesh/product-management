@@ -1,0 +1,22 @@
+</main>
+<script>
+<% if (typeof success !== "undefined" && success.length > 0) { %>
+      <% success.forEach(msg => { %>
+        showToast("success", "Success", "<%= msg %>");
+      <% }) %>
+    <% } %>
+
+    <% if (typeof error !== "undefined" && error.length > 0) { %>
+      <% error.forEach(msg => { %>
+        showToast("error", "Error", "<%= msg %>");
+      <% }) %>
+    <% } %>
+  </script>
+
+<footer class="footer">
+  <p>&copy; 2026 Product Management</p>
+</footer>
+
+</body>
+
+</html>

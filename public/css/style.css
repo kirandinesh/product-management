@@ -1,0 +1,150 @@
+:root {
+  --success-border: #01c851;
+  --error-border: #ff3447;
+  --warning-border: #ffbb35;
+  --info-border: #33b5e7;
+
+  --success-bg: #017e3330;
+  --error-bg: #cd000130;
+  --warning-bg: #ff880130;
+  --info-bg: #0099cc30;
+}
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1 {
+  margin: 0;
+}
+.alert {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d32f2f;
+  animation: hideAlert 3s forwards;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 77, 79, 0.15),
+    rgba(255, 77, 79, 0.03)
+  );
+
+  border-left: 3px solid #ff4d4f;
+  border-radius: 4px;
+}
+
+@keyframes hideAlert {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.box {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  width: 320px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  animation: toast 3s forwards;
+  position: relative;
+}
+
+.notification::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  animation: progress 3s linear forwards;
+}
+
+.success {
+  color: var(--success-border);
+  background: linear-gradient(to right, #01c851aa, var(--success-bg) 100%);
+}
+.success::before {
+  background: var(--success-border);
+}
+
+.error {
+  color: var(--error-border);
+  background: linear-gradient(to right, #ff3447aa 60%, var(--error-bg));
+}
+.error::before {
+  background: var(--error-border);
+}
+
+.title h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.title p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+.close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@keyframes toast {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}

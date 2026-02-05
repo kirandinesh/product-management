@@ -1,0 +1,68 @@
+<div class="add-product-container">
+  <div class="add-product-cancel">
+    <button class="add-product-cancel-button">
+      <div class="sign">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+        >
+          <path d="M18 6l-12 12" />
+          <path d="M6 6l12 12" />
+        </svg>
+      </div>
+    </button>
+  </div>
+  <div class="heading">Add Product</div>
+
+  <form
+    method="post"
+    action="/products/add-product"
+    class="form"
+    id="product-form"
+  >
+    <input type="hidden" name="id" id="product-id" />
+    <div class="input-field-container">
+      <input
+        required=""
+        class="input"
+        type="text"
+        name="name"
+        id="product-name"
+        placeholder="Product Name"
+      />
+      <input
+        required=""
+        class="input"
+        type="number"
+        name="price"
+        id="product-price"
+        placeholder="Price"
+      />
+      <input
+        required=""
+        class="input"
+        type="number"
+        name="quantity"
+        id="product-quantity"
+        placeholder="Stock"
+      />
+    </div>
+
+    <button
+      class="confirm-button"
+      type="submit"
+      id="submit-btn"
+      value="Confirm"
+    >
+      Confirm
+    </button>
+  </form>
+</div>
